@@ -5,7 +5,7 @@ const Main = () => {
 
     return (
         <div className="mainContent">
-
+            NOTHING IN FEED...
 
         </div>
 

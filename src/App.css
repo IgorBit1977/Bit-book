@@ -4,8 +4,40 @@
   display: flex;
   min-height: 100vh;
   flex-direction: column;
+  text-align:center;
+  font-size:30px;
+  padding-top:20%;
 }
-
 main {
   flex: 1 0 auto;
+}
+nav{
+  background-color:#d6f0ff;
+}
+.aNav {
+  color:black;
+}
+
+.liFeed1 {
+  border-right:1px solid white;
+  color:#3477e2;
+  font-weight:700;
+}
+.liFeed2 {
+  border-right:1px solid white;
+  color:#3477e2;
+  font-weight:700;
+}
+.liFeed3 {
+  border-right:1px solid white;
+  color:#3477e2;
+  font-weight:700;
+}
+.page-footer {
+  background-color:#d6f0ff;
+}
+
+/* FOOTER */
+.footerText {
+  color:#3477e2;
 }
