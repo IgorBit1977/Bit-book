@@ -1,7 +1,8 @@
 import React, { Component, Fragment } from 'react';
 import './App.css';
+// import Modal from "react-responsive-modal";
 import 'materialize-css/dist/css/materialize.min.css';
-import ReactDOM from 'react-dom';
+// import ReactDOM from 'react-dom';
 
 //COMPONENTS
 import { Header } from './view/Header';
@@ -15,7 +16,6 @@ class App extends Component {
         <Header />
         <Main />
         <Footer />
-
       </Fragment>
     )
   }

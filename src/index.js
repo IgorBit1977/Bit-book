@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+// import Modal from "react-responsive-modal";
 import App from './App';
 import "materialize-css/dist/css/materialize.min.css";
 
