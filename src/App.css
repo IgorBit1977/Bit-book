@@ -1,13 +1,15 @@
 @import "../node_modules/materialize-css/dist/css/materialize.min.css";
-
+* {
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
 
 /* MAIN */
 .mainContent {
   display: flex;
   min-height: 100vh;
   flex-direction: column;
-  text-align:center;
-  font-size:30px;
   padding-top:20%;
 }
 main {
@@ -114,6 +116,28 @@ nav{
 }
 .page-footer {
   background-color:#d6f0ff;
+}
+/* 
+CREATE POST */
+.create-post{
+  border:2px solid black;
+  position:fixed;
+  bottom:0px;
+  right:20px;
+  padding:10px;
+}
+.new-post {
+  width:100px;
+  height:100px;
+  border-radius:50%;
+  border:2px solid black;
+  font-size:22px;
+  display:flex;
+}
+.new-post div {
+  margin:auto;
+  text-align: center;
+  line-height: 1.2;
 }
 
 /* FOOTER */

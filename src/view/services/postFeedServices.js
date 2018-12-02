@@ -1,4 +1,4 @@
-import { BASE_URL, API_KEY, SESSION_ID, GET_POSTS, GET_TEXT_POSTS, POST_TEXT_POSTS } from '../config/constants';
+import { BASE_URL, API_KEY, SESSION_ID, GET_POSTS, TEXT_POSTS, IMAGE_POSTS, VIDEO_POSTS } from '../config/constants';
 import { VideoPost } from '../entities/VideoPost';
 import { ImagePost } from '../entities/ImagePost';
 import { TextPost } from '../entities/TextPost';
@@ -34,6 +34,64 @@ class PostService {
             })
         })
     }
+
+    uploadTextPost = (textPost) => {
+        return fetch(`${BASE_URL}${TEXT_POSTS}`, {
+            method: "POST",
+            body: JSON.stringify({
+                text: textPost
+            }),
+            headers: {
+                'Content-Type': 'application/json',
+                'Key': API_KEY,
+                'SessionId': SESSION_ID
+            }})
+            .then((response) => {
+                return response.json();
+            })
+            .then(response => {
+                return response;
+            })
+        }
+
+        uploadImagePost = (imagePost) => {
+            return fetch(`${BASE_URL}${IMAGE_POSTS}`, {
+            method: "POST",
+            body:JSON.stringify({
+                imageUrl: imagePost
+            }),
+            headers: {
+                'Content-Type': 'application/json',
+                'Key': API_KEY,
+                'SessionId': SESSION_ID
+            }})
+            .then((response) => {
+                return response.json();
+            })
+            .then(response => {
+                return response;
+            })        
+        }
+
+        uploadVideoPost = (videoPost) => {
+            return fetch(`${BASE_URL}${VIDEO_POSTS}`, {
+                method: "POST",
+                body: JSON.stringify({
+                    videoUrl: videoPost
+                }),
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Key': API_KEY,
+                    'SessionId': SESSION_ID
+                }})
+                .then((response) => {
+                    return response.json();
+                })
+                .then(response => {
+                    return response;
+                })
+            }
+        
 }
 
 export const postService = new PostService();
